@@ -7,6 +7,31 @@ import Produtos from './routes/Produtos/index.jsx';
 import Error from './routes/Error/index.jsx';
 import EditarProdutos from './routes/EditarProdutos/index.jsx';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>,
+    errorElement: <Error/>,
+    children:[
+      {
+        path: "/",
+        element:<Home/>
+      },
+      {
+        path: "/produtos",
+        element: <Produtos/>
+      },
+      {
+        path: "/editar/produtos/:id",
+        element: <EditarProdutos/>
+      }
+    ]
+  
+  }
+  ])
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
