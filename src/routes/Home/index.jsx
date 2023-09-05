@@ -1,6 +1,6 @@
 export default function Home(){
 
-    retrun(
+    return(
         <main>
             <h1>HOME</h1>
         </main>
